@@ -151,6 +151,16 @@ Tokens S (Tokens nextToken) {
 		CParser(nextToken);
 		BParser(nextToken);
 	}
+	else if (CParser(nextToken))
+	{
+		AParser(nextToken);
+		BParser(nextToken);
+	}
+	else if (BParser(nextToken))
+	{
+		AParser(nextToken);
+		CParser(nextToken);
+	}
 }
 
 
